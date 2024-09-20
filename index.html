@@ -5,6 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wedding Website</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+    <style>
+        /* Make the iframe responsive */
+        iframe {
+            width: 100%;
+            height: 100vh; /* Adjust height as needed */
+            border: none;
+        }
+
+        /* For smaller devices, set a minimum height */
+        @media (max-width: 768px) {
+            iframe {
+                height: 600px;
+            }
+        }
+    </style>
 </head>
 <body>
     <!-- Navigation -->
@@ -61,18 +76,12 @@
                     <h3>Let us know if you're attending!</h3>
                 </header>
                 
-                <!-- Google Form -->
-                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSe1AFtTnxFR5nPXe1LdpMNJrBVVFIU1U2zI4sM_OJMZe1wHmg/viewform?usp=sharing" width="640" height="943" frameborder="0"></iframe>
+                <!-- Responsive Google Form -->
+                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSe1AFtTnxFR5nPXe1LdpMNJrBVVFIU1U2zI4sM_OJMZe1wHmg/viewform?usp=sharing"></iframe>
                 
-                <!-- RSVP Form -->
-               <!-- <form class="grid" action="#" method="post" onsubmit="event.preventDefault();">
-                    <input type="text" id="firstname" name="firstname" placeholder="Your First Name" aria-label="First Name" required />
-                    <input type="email" id="email" name="email" placeholder="Your Email" aria-label="Email" required />
-                    <button type="submit">Submit</button>
-                </form>
             </article>
         </div>
-    </section> -->
+    </section>
 
     <!-- Footer -->
     <footer class="container">
