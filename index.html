@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Wedding Website</title>
+    <title>Ashma weds Pratik</title>
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css"
@@ -22,18 +22,51 @@
           height: 600px;
         }
       }
+
+      /* Navigation container and heading alignment */
+      nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+      }
+
+      /* Align header and navigation items */
+      .heading-container h1 {
+        margin: 0;
+        font-size: 1.5rem;
+      }
+
+      ul {
+        display: flex;
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      ul li {
+        margin: 0 10px; /* Adds space between navigation items */
+      }
+
+      ul li a {
+        text-decoration: none;
+        color: rgb(248, 243, 243);
+        font-weight: bold;
+      }
     </style>
   </head>
   <body>
+
     <!-- Navigation -->
     <nav class="container-fluid">
-      <ul>
-        <li><strong>Wedding Day</strong></li>
-      </ul>
+      <div class="heading-container">
+        <strong><h1>A & P</h1></strong>
+      </div>
       <ul>
         <li><a href="#story">Our Story</a></li>
         <li><a href="#details">Event Details</a></li>
-        <li><a href="#rsvp" role="button">RSVP</a></li>
+        <li><a href="#venue">Venue Location</a></li>
+        <li><a href="#rsvp">RSVP</a></li>
       </ul>
     </nav>
 
@@ -85,17 +118,18 @@
             </p>
 
             <!-- Google Map Embed -->
-            <h3>Venue Location</h3>
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3532.2189715364677!2d85.3284513!3d27.7202234!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb1984cdc3bb3b%3A0xca116e9047626ba8!2sAlice%20Receptions!5e0!3m2!1sen!2snp!4v1695148735685!5m2!1sen!2snp"
-              width="600"
-              height="450"
-              style="border: 0"
-              allowfullscreen=""
-              loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"
-            >
-            </iframe>
+            <section id="venue">
+              <h3>Venue Location</h3>
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3532.2189715364677!2d85.3284513!3d27.7202234!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb1984cdc3bb3b%3A0xca116e9047626ba8!2sAlice%20Receptions!5e0!3m2!1sen!2snp!4v1695148735685!5m2!1sen!2snp"
+                width="600"
+                height="450"
+                style="border: 0"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
+            </section>
           </section>
         </section>
       </div>
@@ -115,32 +149,7 @@
             src="https://docs.google.com/forms/d/e/1FAIpQLSe1AFtTnxFR5nPXe1LdpMNJrBVVFIU1U2zI4sM_OJMZe1wHmg/viewform?usp=sharing"
           ></iframe>
 
-          <!-- RSVP Form -->
-          <!-- Form hidden replaced by Google Form -->
-          <!-- <form
-            class="grid"
-            action="#"
-            method="post"
-            onsubmit="event.preventDefault();"
-          >
-            <input
-              type="text"
-              id="firstname"
-              name="firstname"
-              placeholder="Your First Name"
-              aria-label="First Name"
-              required
-            />
-            <input
-              type="email"
-              id="email"
-              name="email"
-              placeholder="Your Email"
-              aria-label="Email"
-              required
-            />
-            <button type="submit">Submit</button>
-          </form> -->
+          <!-- RSVP Form --> <!-- Form hidden replaced by Google Form -->
         </article>
       </div>
     </section>
