@@ -1,113 +1,156 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Wedding Website</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css"
+    />
     <style>
-        /* Make the iframe responsive */
-        iframe {
-            width: 100%;
-            height: 100vh; /* Adjust height as needed */
-            border: none;
-        }
+      /* Make the iframe responsive */
+      iframe {
+        width: 100%;
+        height: 100vh; /* Adjust height as needed */
+        border: none;
+      }
 
-        /* For smaller devices, set a minimum height */
-        @media (max-width: 768px) {
-            iframe {
-                height: 600px;
-            }
+      /* For smaller devices, set a minimum height */
+      @media (max-width: 768px) {
+        iframe {
+          height: 600px;
         }
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <!-- Navigation -->
     <nav class="container-fluid">
-        <ul>
-            <li><strong>Wedding Day</strong></li>
-        </ul>
-        <ul>
-            <li><a href="#story">Our Story</a></li>
-            <li><a href="#details">Event Details</a></li>
-            <li><a href="#rsvp" role="button">RSVP</a></li>
-        </ul>
+      <ul>
+        <li><strong>Wedding Day</strong></li>
+      </ul>
+      <ul>
+        <li><a href="#story">Our Story</a></li>
+        <li><a href="#details">Event Details</a></li>
+        <li><a href="#rsvp" role="button">RSVP</a></li>
+      </ul>
     </nav>
 
     <!-- Main Content -->
     <main class="container">
-        <div class="grid">
-            <section>
-                <header>
-                    <h2>Welcome to Our Wedding</h2>
-                    <h3>A Special Day of Love and Celebration</h3>
-                </header>
-                <p>We are so excited to celebrate this day with you. Below you'll find all the information about our wedding, our story, and how to RSVP.</p>
-                
-                <!-- Image -->
-                <figure>
-                    <img src="https://files.oaiusercontent.com/file-KStQZkZ8lTGZWDcdbM7oqvUF?se=2024-09-20T06%3A21%3A22Z&amp;sp=r&amp;sv=2024-08-04&amp;sr=b&amp;rscc=max-age%3D604800%2C%20immutable%2C%20private&amp;rscd=attachment%3B%20filename%3Da9ec3f6b-a5fa-47c2-b58f-3f02067ba76a.webp&amp;sig=eZcqoUug7VVXzMWkCEJjSi4m6mnLxj7vuPvAA2HKKyU%3D" alt="Wedding scene">
-                    <figcaption>
-                        <a href="https://files.oaiusercontent.com/file-KStQZkZ8lTGZWDcdbM7oqvUF" target="_blank">View Larger</a>
-                    </figcaption>
-                </figure>
+      <div class="grid">
+        <section>
+          <header>
+            <h2>Welcome to Our Wedding</h2>
+            <h3>A Special Day of Love and Celebration</h3>
+          </header>
+          <p>
+            We are so excited to celebrate this day with you. Below you'll find
+            all the information about our wedding, our story, and how to RSVP.
+          </p>
 
-                <!-- Our Story -->
-                <section id="story">
-                    <h3>Our Story</h3>
-                    <p>It all began on a warm summer day when we first met. From that moment, we knew this day would come. We’ve shared countless memories and are excited to make more with you at our wedding.</p>
-                </section>
+          <!-- Image -->
+          <figure>
+            <img
+              src="https://files.oaiusercontent.com/file-KStQZkZ8lTGZWDcdbM7oqvUF?se=2024-09-20T06%3A21%3A22Z&amp;sp=r&amp;sv=2024-08-04&amp;sr=b&amp;rscc=max-age%3D604800%2C%20immutable%2C%20private&amp;rscd=attachment%3B%20filename%3Da9ec3f6b-a5fa-47c2-b58f-3f02067ba76a.webp&amp;sig=eZcqoUug7VVXzMWkCEJjSi4m6mnLxj7vuPvAA2HKKyU%3D"
+              alt="Wedding scene"
+            />
+            <figcaption>
+              <a
+                href="https://files.oaiusercontent.com/file-KStQZkZ8lTGZWDcdbM7oqvUF"
+                target="_blank"
+                >View Larger</a
+              >
+            </figcaption>
+          </figure>
 
-                <!-- Event Details -->
-                <section id="details">
-                    <h3>Event Details</h3>
-                    <p>Join us at our beautiful outdoor venue for a day filled with love, laughter, and joy. The ceremony will take place at sunset, followed by dinner and dancing under the stars.</p>
+          <!-- Our Story -->
+          <section id="story">
+            <h3>Our Story</h3>
+            <p>
+              It all began on a warm summer day when we first met. From that
+              moment, we knew this day would come. We’ve shared countless
+              memories and are excited to make more with you at our wedding.
+            </p>
+          </section>
 
-                    <!-- Google Map Embed -->
-                    <h4>Venue Location</h4>
-                   <iframe 
-    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3532.2189715364677!2d85.3284513!3d27.7202234!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb1984cdc3bb3b%3A0xca116e9047626ba8!2sAlice%20Receptions!5e0!3m2!1sen!2snp!4v1695148735685!5m2!1sen!2snp" 
-    width="600" 
-    height="450" 
-    style="border:0;" 
-    allowfullscreen="" 
-    loading="lazy" 
-    referrerpolicy="no-referrer-when-downgrade">
-</iframe>
+          <!-- Event Details -->
+          <section id="details">
+            <h3>Event Details</h3>
+            <p>
+              Join us at our beautiful outdoor venue for a day filled with love,
+              laughter, and joy. The ceremony will take place at sunset,
+              followed by dinner and dancing under the stars.
+            </p>
 
-                </section>
-            </section>
-        </div>
+            <!-- Google Map Embed -->
+            <h3>Venue Location</h3>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3532.2189715364677!2d85.3284513!3d27.7202234!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb1984cdc3bb3b%3A0xca116e9047626ba8!2sAlice%20Receptions!5e0!3m2!1sen!2snp!4v1695148735685!5m2!1sen!2snp"
+              width="600"
+              height="450"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            >
+            </iframe>
+          </section>
+        </section>
+      </div>
     </main>
 
     <!-- RSVP Section -->
     <section aria-labelledby="rsvp">
-        <div class="container">
-            <article>
-                <header>
-                    <h2 id="rsvp">RSVP</h2>
-                    <h3>Let us know if you're attending!</h3>
-                </header>
-                
-                <!-- Responsive Google Form -->
-                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSe1AFtTnxFR5nPXe1LdpMNJrBVVFIU1U2zI4sM_OJMZe1wHmg/viewform?usp=sharing"></iframe>
-                
-                <!-- RSVP Form -->
-                <form class="grid" action="#" method="post" onsubmit="event.preventDefault();">
-                    <input type="text" id="firstname" name="firstname" placeholder="Your First Name" aria-label="First Name" required />
-                    <input type="email" id="email" name="email" placeholder="Your Email" aria-label="Email" required />
-                    <button type="submit">Submit</button>
-                </form>
-            </article>
-        </div>
+      <div class="container">
+        <article>
+          <header>
+            <h2 id="rsvp">RSVP</h2>
+            <h3>Let us know if you're attending!</h3>
+          </header>
+
+          <!-- Responsive Google Form -->
+          <iframe
+            src="https://docs.google.com/forms/d/e/1FAIpQLSe1AFtTnxFR5nPXe1LdpMNJrBVVFIU1U2zI4sM_OJMZe1wHmg/viewform?usp=sharing"
+          ></iframe>
+
+          <!-- RSVP Form -->
+          <!-- Form hidden replaced by Google Form -->
+          <!-- <form
+            class="grid"
+            action="#"
+            method="post"
+            onsubmit="event.preventDefault();"
+          >
+            <input
+              type="text"
+              id="firstname"
+              name="firstname"
+              placeholder="Your First Name"
+              aria-label="First Name"
+              required
+            />
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Your Email"
+              aria-label="Email"
+              required
+            />
+            <button type="submit">Submit</button>
+          </form> -->
+        </article>
+      </div>
     </section>
 
     <!-- Footer -->
     <footer class="container">
-        <small>
-            <a href="#story">Our Story</a> • 
-            <a href="#details">Event Details</a>
-        </small>
+      <small>
+        <a href="#story">Our Story</a> •
+        <a href="#details">Event Details</a>
+      </small>
     </footer>
-</body>
+  </body>
 </html>
