@@ -34,6 +34,42 @@
         color: inherit;
       }
 
+      /* Landing Page */
+      #landing {
+        background: url("landing-image.jpg") no-repeat center center/cover;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        color: #fff;
+        position: relative;
+      }
+
+      .landing-content h1 {
+        font-size: 4rem;
+        margin: 0;
+      }
+
+      .landing-content p {
+        font-size: 1.5rem;
+        margin: 10px 0;
+      }
+
+      .enter-button {
+        background: #ffcccb;
+        padding: 10px 20px;
+        border-radius: 5px;
+        font-size: 1.2rem;
+        transition: background 0.3s ease;
+        color: #333;
+        cursor: pointer;
+      }
+
+      .enter-button:hover {
+        background: #ffb6b5;
+      }
+
       /* Hero Section */
       #hero {
         background: url("hero-image.jpg") no-repeat center center/cover;
@@ -168,6 +204,15 @@
     </style>
   </head>
   <body>
+    <!-- Landing Page -->
+    <section id="landing">
+      <div class="landing-content">
+        <h1>Ashma & Pratik</h1>
+        <p>We're getting married</p>
+        <a href="#hero" class="enter-button">ENTER</a>
+      </div>
+    </section>
+
     <!-- Navigation -->
     <nav>
       <h1>Ashma & Pratik</h1>
