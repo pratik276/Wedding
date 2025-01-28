@@ -213,6 +213,12 @@
     </style>
   </head>
   <body>
+    <!-- Background Music -->
+    <audio id="background-music" autoplay loop muted>
+      <source src="your-music-file.mp3" type="audio/mpeg" />
+      Your browser does not support the audio element.
+    </audio>
+
     <!-- Countdown Section -->
 
     <!-- Hero Section -->
@@ -311,6 +317,23 @@
       <p>© 2025 Ashma & Pratik. Made with ❤️</p>
     </footer>
 
+    <!-- Guest Image Upload Section -->
+    <section id="upload">
+      <h2>Upload Your Wedding Photos</h2>
+      <h3>
+        We’d love to see your special moments from the day! Please upload your
+        photos to our shared folder below.
+      </h3>
+      <p>
+        <a
+          href="https://drive.google.com/drive/folders/1RV_9NSAxpOPhAc2ljplKyhNusqf1AzRF?usp=sharing"
+          target="_blank"
+          class="cta-button"
+          >Upload Photos</a
+        >
+      </p>
+    </section>
+
     <script>
       // Set the wedding date (February 13, 2025)
       const weddingDate = new Date("February 13, 2025 00:00:00").getTime();
@@ -341,16 +364,15 @@
             "<h2>We're married! Thank you for celebrating with us!</h2>";
         }
       }, 1000);
+
+      // Unmute audio after user interaction
+      document.addEventListener("click", () => {
+        const audio = document.getElementById("background-music");
+        if (audio.muted) {
+          audio.muted = false;
+          audio.play();
+        }
+      });
     </script>
-
-<!-- Guest Image Upload Section -->
-<section id="upload">
-  <h2>Upload Your Wedding Photos</h2>
-  <h3>We’d love to see your special moments from the day! Please upload your photos to our shared folder below.</h3>
-
-<p>
-  <a href="https://drive.google.com/drive/folders/1RV_9NSAxpOPhAc2ljplKyhNusqf1AzRF?usp=sharing" target="_blank" class="cta-button">Upload Photos</a>
-</section>
-</p>
   </body>
 </html>
