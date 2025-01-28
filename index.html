@@ -3,241 +3,338 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ashma weds Pratik</title>
+    <title>Ashma & Pratik</title>
     <link
       rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400&display=swap"
+      rel="stylesheet"
     />
     <style>
-      /* Make the iframe responsive */
-      iframe {
-        width: 100%;
-        height: 100vh; /* Adjust height as needed */
-        border: none;
-      }
-a
-      /* For smaller devices, set a minimum height */
-      @media (max-width: 768px) {
-        iframe {
-          height: 600px;
-        }
+      /* General Styles */
+      body {
+        font-family: "Roboto", sans-serif;
+        margin: 0;
+        padding: 0;
+        color: #333;
+        line-height: 1.6;
       }
 
-      /* Navigation container and heading alignment */
+      h1,
+      h2,
+      h3 {
+        font-family: "Playfair Display", serif;
+        font-weight: 700;
+      }
+
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+
+      /* Hero Section */
+      #hero {
+        background: url("hero-image.jpg") no-repeat center center/cover;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        color: #fff;
+        position: relative;
+      }
+
+      .hero-content h1 {
+        font-size: 4rem;
+        margin: 0;
+      }
+
+      .hero-content p {
+        font-size: 1.5rem;
+        margin: 10px 0;
+      }
+
+      .cta-button {
+        background: #ffcccb;
+        padding: 10px 20px;
+        border-radius: 5px;
+        font-size: 1.2rem;
+        transition: background 0.3s ease;
+        color: #333;
+      }
+
+      .cta-button:hover {
+        background: #ffb6b5;
+      }
+
+      /* Navigation */
       nav {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 10px;
+        padding: 20px;
+        background: rgba(0, 0, 0, 0.5);
+        color: #fff;
       }
 
-      /* Align header and navigation items */
-      .heading-container h1 {
-        margin: 0;
+      nav h1 {
         font-size: 1.5rem;
+        margin: 0;
       }
 
-      ul {
+      nav ul {
         display: flex;
         list-style-type: none;
         padding: 0;
         margin: 0;
       }
 
-      ul li {
-        margin: 0 10px; /* Adds space between navigation items */
+      nav ul li {
+        margin: 0 15px;
       }
 
-      ul li a {
-        text-decoration: none;
-        color: rgb(248, 243, 243);
+      nav ul li a {
+        color: #fff;
         font-weight: bold;
+      }
+
+      /* Sections */
+      section {
+        padding: 50px 20px;
+        text-align: center;
+      }
+
+      section h2 {
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+      }
+
+      section p {
+        font-size: 1.1rem;
+        max-width: 800px;
+        margin: 0 auto;
+      }
+
+      /* Story Section */
+      #story {
+        background: #f9f9f9;
+      }
+
+      /* Event Details */
+      #details {
+        background: #fff;
+      }
+
+      /* Venue Location */
+      #venue iframe {
+        width: 100%;
+        height: 400px;
+        border: none;
+        margin-top: 20px;
+      }
+
+      /* RSVP Section */
+      #rsvp {
+        background: #f9f9f9;
+      }
+
+      #rsvp iframe {
+        width: 100%;
+        height: 1000px;
+        border: none;
+      }
+
+      /* Footer */
+      footer {
+        padding: 20px;
+        text-align: center;
+        background: #333;
+        color: #fff;
+      }
+
+      footer a {
+        color: #ffcccb;
+      }
+
+      footer a:hover {
+        color: #ffb6b5;
       }
     </style>
   </head>
   <body>
     <!-- Navigation -->
-    <nav class="container-fluid">
-      <div class="heading-container">
-        <strong><h1>A & P</h1></strong>
-      </div>
+    <nav>
+      <h1>Ashma & Pratik</h1>
       <ul>
         <li><a href="#story">Our Story</a></li>
         <li><a href="#details">Event Details</a></li>
-        <li><a href="#venue">Venue Location</a></li>
+        <li><a href="#venue">Venue</a></li>
         <li><a href="#rsvp">RSVP</a></li>
       </ul>
     </nav>
 
-    <!-- Main Content -->
-    <main class="container">
-      <div class="grid">
-        <section>
-          <header>
-            <h2>Welcome to Our Wedding</h2>
-            <h3>A Special Day of Love and Celebration</h3>
-          </header>
-          <p>We’re so thrilled to share this special day with you!</p>
-          <p>
-            Join us as we begin this exciting new chapter in our lives. Below,
-            you’ll find all the details of our big day and the story of how we
-            found each other,and how you can join us to celebrate this special
-            moment.
-          </p>
-          <p>We can't wait to make beautiful memories together!</p>
-
-          <!-- Image -->
-          <figure>
-            <img src="hello.jpg" alt="Wedding scene" />
-          </figure>
-
-          <!-- Our Story -->
-          <section id="story">
-            <h3>Our Story</h3>
-            <p>
-              On February 13, 2021, the air was crisp and the night felt alive.
-              He was out with his friends, celebrating a special moment at a
-              hilltop farmhouse. The laughter echoed across the open skies, the
-              music blending with the crackling of the bonfire, but somewhere
-              deep within, there was a void. As much as he enjoyed the company,
-              he couldn't shake the feeling that something was missing in his
-              life. He yearned for someone special, someone whose presence could
-              fill the silence he often felt after the noise faded. That night,
-              as he gazed out into the vast horizon, he quietly wished for
-              someone who would sing to his heart.
-            </p>
-            <p>
-              Miles away, she lay at home, her dreams swirling in the stillness
-              of the night. She had always been a dreamer, picturing a world
-              where everything fell into place as if destiny had written it.
-              That night, her dreams were vivid, but she had no idea that her
-              life was about to take a turn she had only imagined.
-            </p>
-            <p>
-              The next day, February 14, 2021, the day of love, he returned
-              home, the warmth of the farmhouse fading into memories. With
-              Valentine's Day all around, the desire for companionship stirred
-              within him stronger than ever. He wished he could find a
-              girl—someone who would not only understand him but sing for him,
-              filling his life with melody.
-            </p>
-            <p>
-              As fate would have it, that very day, she was returning to her
-              hostel. Her father was driving her, and though her mind was
-              wandering, something magical was about to happen. A chat started
-              between them, a simple exchange that felt anything but ordinary.
-              It was as if the gods had finally answered his wish. She, sweet
-              and gentle, took the time to chat with him, despite being on the
-              road with her dad. What began as casual conversation quickly
-              turned into something more. It was as though they had been waiting
-              for each other without even knowing it.
-            </p>
-            <p>
-              Both of them, though content in their lives, had been yearning for
-              something deeper, something to bring them joy. And in each other,
-              they found exactly that. They began to look forward to the day
-              they would meet. Though the days passed slowly, there was always a
-              sense of excitement in the air, a shared hope that they would soon
-              be face to face.
-            </p>
-            <p>
-              And then, that moment arrived. When they finally met, it felt like
-              the missing pieces of their lives had come together. There was no
-              looking back from that day onward. In their ups and downs, they
-              stood by each other, becoming pillars of strength and support.
-              Whether it was the small struggles of daily life or the daunting
-              task of convincing their parents to agree to their marriage, they
-              faced it all, hand in hand.
-            </p>
-            <p>
-              Their love was tested, but never broken. And with all the twists
-              and turns, they finally reached the day that had seemed so
-              distant. On February 13, 2025, exactly four years from the day he
-              had stood on that hilltop farmhouse and wished for someone like
-              her, they will finally get married. It was as though the universe
-              had conspired to bring them together, and now, as they prepare to
-              step into the next chapter of their lives, they do so knowing that
-              they were always meant to be.
-            </p>
-            <p>
-              From a simple chat on a Valentine’s Day to a love that withstood
-              every challenge, their story is one of serendipity, struggle, and
-              joy. A story that began with a wish under the stars, and now, with
-              the same stars as their witnesses, they will say their vows,
-              sealing a love that was written in the stars all along.
-            </p>
-            <p>
-              On February 13, 2025—four years to the day he made that silent
-              wish—Ashma will be getting married to Pratik.
-            </p>
-            <p>
-              This is our story: one of serendipity, love, and a future that’s
-              just beginning.
-            </p>
-          </section>
-
-          <!-- Event Details -->
-          <section id="details">
-            <h3>Event Details</h3>
-            <p>
-              The wedding ceremony will be held at Bekha's Party Venue on February 13th, 2025. The groom's side to gather at his home in Bakundole Height at 9 AM to set off for Janti to go get the bride. Followed  by dinner and welcome cermony at the groom's home. Could be boring but the drinks on me so be there.
-            </p>
-            <p>
-              And the celebrations don’t stop there! On Tuesday, February 18,
-              2025, we’re hosting a small wedding reception. Come raise a glass
-              with us over dinner and drinks as we celebrate our love and the
-              start of this beautiful new chapter.
-            </p>
-            <p>We can’t wait to see you!</p>
-
-            <!-- Google Map Embed -->
-            <section id="venue">
-              <h3>Venue Location</h3>
-              <h4>Wedding Ceremony</h4>
-              
-              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3533.5356707414744!2d85.3049735!3d27.6698342!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb18302758fbef%3A0xbe36ca75134426e9!2sBekhas%20Party%20Venue!5e0!3m2!1sen!2snp!4v1737660002738!5m2!1sen!2snp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-
-              <p>
-              <h3>Wedding Reception</h3>
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3532.2189715364677!2d85.3284513!3d27.7202234!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb1984cdc3bb3b%3A0xca116e9047626ba8!2sAlice%20Receptions!5e0!3m2!1sen!2snp!4v1695148735685!5m2!1sen!2snp"
-                width="600"
-                height="450"
-                style="border: 0"
-                allowfullscreen=""
-                loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade"
-              ></iframe>
-                </p>
-            </section>
-          </section>
-        </section>
-      </div>
-    </main>
-
-    <!-- RSVP Section -->
-    <section aria-labelledby="rsvp">
-      <div class="container">
-        <article>
-          <header>
-            <h2 id="rsvp">RSVP</h2>
-            <h3>Let us know if you're attending!</h3>
-          </header>
-
-          <!-- Responsive Google Form -->
-          <iframe
-            src="https://docs.google.com/forms/d/e/1FAIpQLSe1AFtTnxFR5nPXe1LdpMNJrBVVFIU1U2zI4sM_OJMZe1wHmg/viewform?usp=sharing"
-          ></iframe>
-        </article>
+    <!-- Hero Section -->
+    <section id="hero">
+      <div class="hero-content">
+        <h1>Ashma & Pratik</h1>
+        <p>February 13, 2025</p>
+        <a href="#rsvp" class="cta-button">RSVP</a>
       </div>
     </section>
 
+    <!-- Our Story -->
+    <section id="story">
+      <h2>Our Story</h2>
+      <p>
+        On February 13, 2021, the air was crisp and the night felt alive. He was
+        out with his friends, celebrating a special moment at a hilltop
+        farmhouse. The laughter echoed across the open skies, the music blending
+        with the crackling of the bonfire, but somewhere deep within, there was
+        a void. As much as he enjoyed the company, he couldn't shake the feeling
+        that something was missing in his life. He yearned for someone special,
+        someone whose presence could fill the silence he often felt after the
+        noise faded. That night, as he gazed out into the vast horizon, he
+        quietly wished for someone who would sing to his heart.
+      </p>
+      <p>
+        Miles away, she lay at home, her dreams swirling in the stillness of the
+        night. She had always been a dreamer, picturing a world where everything
+        fell into place as if destiny had written it. That night, her dreams
+        were vivid, but she had no idea that her life was about to take a turn
+        she had only imagined.
+      </p>
+      <p>
+        The next day, February 14, 2021, the day of love, he returned home, the
+        warmth of the farmhouse fading into memories. With Valentine's Day all
+        around, the desire for companionship stirred within him stronger than
+        ever. He wished he could find a girl—someone who would not only
+        understand him but sing for him, filling his life with melody.
+      </p>
+      <p>
+        As fate would have it, that very day, she was returning to her hostel.
+        Her father was driving her, and though her mind was wandering, something
+        magical was about to happen. A chat started between them, a simple
+        exchange that felt anything but ordinary. It was as if the gods had
+        finally answered his wish. She, sweet and gentle, took the time to chat
+        with him, despite being on the road with her dad. What began as casual
+        conversation quickly turned into something more. It was as though they
+        had been waiting for each other without even knowing it.
+      </p>
+      <p>
+        Both of them, though content in their lives, had been yearning for
+        something deeper, something to bring them joy. And in each other, they
+        found exactly that. They began to look forward to the day they would
+        meet. Though the days passed slowly, there was always a sense of
+        excitement in the air, a shared hope that they would soon be face to
+        face.
+      </p>
+      <p>
+        And then, that moment arrived. When they finally met, it felt like the
+        missing pieces of their lives had come together. There was no looking
+        back from that day onward. In their ups and downs, they stood by each
+        other, becoming pillars of strength and support. Whether it was the
+        small struggles of daily life or the daunting task of convincing their
+        parents to agree to their marriage, they faced it all, hand in hand.
+      </p>
+      <p>
+        Their love was tested, but never broken. And with all the twists and
+        turns, they finally reached the day that had seemed so distant. On
+        February 13, 2025, exactly four years from the day he had stood on that
+        hilltop farmhouse and wished for someone like her, they will finally get
+        married. It was as though the universe had conspired to bring them
+        together, and now, as they prepare to step into the next chapter of
+        their lives, they do so knowing that they were always meant to be.
+      </p>
+      <p>
+        From a simple chat on a Valentine’s Day to a love that withstood every
+        challenge, their story is one of serendipity, struggle, and joy. A story
+        that began with a wish under the stars, and now, with the same stars as
+        their witnesses, they will say their vows, sealing a love that was
+        written in the stars all along.
+      </p>
+      <p>
+        On February 13, 2025—four years to the day he made that silent wish—Ashma
+        will be getting married to Pratik.
+      </p>
+      <p>
+        This is our story: one of serendipity, love, and a future that’s just
+        beginning.
+      </p>
+    </section>
+
+    <!-- Event Details -->
+    <section id="details">
+      <h2>Event Details</h2>
+      <p>
+        The wedding ceremony will be held at Bekha's Party Venue on February
+        13th, 2025. The groom's side will gather at his home in Bakundole Height
+        at 9 AM to set off for Janti to go get the bride. This will be followed
+        by dinner and a welcome ceremony at the groom's home. The drinks are on
+        us, so don’t miss it!
+      </p>
+      <p>
+        And the celebrations don’t stop there! On Tuesday, February 18, 2025,
+        we’re hosting a small wedding reception. Come raise a glass with us over
+        dinner and drinks as we celebrate our love and the start of this
+        beautiful new chapter.
+      </p>
+      <p>We can’t wait to see you!</p>
+    </section>
+
+    <!-- Venue Location -->
+    <section id="venue">
+      <h2>Venue Location</h2>
+      <h3>Wedding Ceremony</h3>
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3533.5356707414744!2d85.3049735!3d27.6698342!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb18302758fbef%3A0xbe36ca75134426e9!2sBekhas%20Party%20Venue!5e0!3m2!1sen!2snp!4v1737660002738!5m2!1sen!2snp"
+        width="600"
+        height="450"
+        style="border: 0"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+      ></iframe>
+
+      <h3>Wedding Reception</h3>
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3532.2189715364677!2d85.3284513!3d27.7202234!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb1984cdc3bb3b%3A0xca116e9047626ba8!2sAlice%20Receptions!5e0!3m2!1sen!2snp!4v1695148735685!5m2!1sen!2snp"
+        width="600"
+        height="450"
+        style="border: 0"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+      ></iframe>
+    </section>
+
+    <!-- RSVP Section -->
+    <section id="rsvp">
+      <h2>RSVP</h2>
+      <h3>Let us know if you're attending!</h3>
+      <iframe
+        src="https://docs.google.com/forms/d/e/1FAIpQLSe1AFtTnxFR5nPXe1LdpMNJrBVVFIU1U2zI4sM_OJMZe1wHmg/viewform?embedded=true"
+        width="100%"
+        height="1000"
+        frameborder="0"
+        marginheight="0"
+        marginwidth="0"
+        >Loading…</iframe
+      >
+    </section>
+
     <!-- Footer -->
-    <footer class="container">
-      <small>
-        <a href="#story">Our Story</a> •
-        <a href="#details">Event Details</a>
-      </small>
+    <footer>
+      <p>© 2025 Ashma & Pratik. Made with ❤️</p>
+      <div class="social-links">
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-facebook"></i></a>
+      </div>
     </footer>
   </body>
 </html>
