@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ashma & Pratik</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
@@ -32,6 +33,50 @@
       a {
         text-decoration: none;
         color: inherit;
+      }
+
+      /* Countdown Styles */
+      #countdown {
+        background: transparent; /* Fully transparent background */
+        color: #fff; /* White text color */
+        padding: 20px; /* 20px padding */
+        text-align: center; /* Centered text */
+      }
+
+      #countdown h2 {
+        font-size: 2rem;
+        margin-bottom: 10px;
+      }
+
+      #timer {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        font-size: 1.5rem;
+      }
+
+      #timer div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      #timer span {
+        font-size: 2.5rem;
+        font-weight: bold;
+      }
+
+      /* Icon Styles */
+      .top-icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px 0;
+      }
+
+      .top-icon img {
+        max-width: 100px; /* Adjust size as needed */
+        height: auto;
       }
 
       /* Hero Section */
@@ -168,20 +213,32 @@
     </style>
   </head>
   <body>
+    <!-- Countdown Section -->
 
     <!-- Hero Section -->
     <section id="hero">
       <div class="hero-content">
         <h2>You are cordially invited to wedding</h2>
-        <h2>of</h2>
+        <div class="top-icon">
+          <img src="your-transparent-image.png" alt="Icon" />
+        </div>
         <h1>Ashma & Pratik</h1>
-         <p>Save the Date</p>
+        <p>Save the Date</p>
         <p>February 13, 2025</p>
         <a href="#rsvp" class="cta-button">RSVP</a>
+        <div id="countdown">
+          <h2>Countdown to Our Wedding</h2>
+          <div id="timer">
+            <div><span id="days"></span>Days</div>
+            <div><span id="hours"></span>Hours</div>
+            <div><span id="minutes"></span>Minutes</div>
+            <div><span id="seconds"></span>Seconds</div>
+          </div>
+        </div>
       </div>
     </section>
 
-       <!-- Event Details -->
+    <!-- Event Details -->
     <section id="details">
       <h2>Event Details</h2>
       <p>
@@ -193,9 +250,9 @@
       </p>
       <p>
         And the celebrations don’t stop there! On Tuesday, February 18, 2025,
-        we’re hosting a small wedding reception at Alice Receptions. Come raise a glass with us over
-        dinner and drinks as we celebrate our love and the start of this
-        beautiful new chapter.
+        we’re hosting a small wedding reception at Alice Receptions. Come raise
+        a glass with us over dinner and drinks as we celebrate our love and the
+        start of this beautiful new chapter.
       </p>
       <p>We can’t wait to see you!</p>
     </section>
@@ -204,11 +261,9 @@
     <section id="venue">
       <h2>Venue Location</h2>
       <h3>Wedding Ceremony</h3>
-<p><strong>Date:</strong> Falgun 1, 2081</p>
+      <p><strong>Date:</strong> Falgun 1, 2081</p>
       <p><strong>Time:</strong> 8:30 AM</p>
-      <p>
-        <strong>Location:</strong> Bekhas Party Venue
-      </p>
+      <p><strong>Location:</strong> Bekhas Party Venue</p>
 
       <iframe
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3533.5356707414744!2d85.3049735!3d27.6698342!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb18302758fbef%3A0xbe36ca75134426e9!2sBekhas%20Party%20Venue!5e0!3m2!1sen!2snp!4v1737660002738!5m2!1sen!2snp"
@@ -221,11 +276,9 @@
       ></iframe>
 
       <h3>Wedding Reception</h3>
-<p><strong>Date:</strong> Falgun 6, 2081</p>
+      <p><strong>Date:</strong> Falgun 6, 2081</p>
       <p><strong>Time:</strong> 5:30 PM</p>
-      <p>
-        <strong>Location:</strong> Alice Receptions
-      </p>
+      <p><strong>Location:</strong> Alice Receptions</p>
 
       <iframe
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3532.2189715364677!2d85.3284513!3d27.7202234!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb1984cdc3bb3b%3A0xca116e9047626ba8!2sAlice%20Receptions!5e0!3m2!1sen!2snp!4v1695148735685!5m2!1sen!2snp"
@@ -256,4 +309,38 @@
     <!-- Footer -->
     <footer>
       <p>© 2025 Ashma & Pratik. Made with ❤️</p>
-   
+    </footer>
+
+    <script>
+      // Set the wedding date (February 13, 2025)
+      const weddingDate = new Date("February 13, 2025 00:00:00").getTime();
+
+      // Update the countdown every second
+      const countdown = setInterval(() => {
+        const now = new Date().getTime();
+        const timeLeft = weddingDate - now;
+
+        // Calculate days, hours, minutes, and seconds
+        const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+        const hours = Math.floor(
+          (timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+        );
+        const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+
+        // Display the countdown
+        document.getElementById("days").innerText = days;
+        document.getElementById("hours").innerText = hours;
+        document.getElementById("minutes").innerText = minutes;
+        document.getElementById("seconds").innerText = seconds;
+
+        // If the countdown is over, display a message
+        if (timeLeft < 0) {
+          clearInterval(countdown);
+          document.getElementById("countdown").innerHTML =
+            "<h2>We're married! Thank you for celebrating with us!</h2>";
+        }
+      }, 1000);
+    </script>
+  </body>
+</html>
